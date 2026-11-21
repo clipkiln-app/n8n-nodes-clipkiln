@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Clipkiln">
+  <defs>
+    <!-- Same as the header mark: linear-gradient(150deg, #0000DD, gold), white C with a dark halo. -->
+    <linearGradient id="ck" x1="0.1585" y1="-0.0915" x2="0.8415" y2="1.0915">
+      <stop offset="0" stop-color="#0000DD"/>
+      <stop offset="1" stop-color="#FFCC00"/>
+    </linearGradient>
+    <filter id="halo" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000008" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#ck)"/>
+  <path d="M44 21 A15 15 0 1 0 44 43" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" filter="url(#halo)"/>
+</svg>

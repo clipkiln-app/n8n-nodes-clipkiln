@@ -1,0 +1,55 @@
+{
+    "name": "n8n-nodes-clipkiln",
+    "version": "0.1.0",
+    "description": "n8n nodes for Clipkiln: turn long videos into captioned short clips and make narrated story videos, with instant triggers.",
+    "license": "MIT",
+    "homepage": "https://clipkiln.com/developers",
+    "keywords": [
+        "n8n-community-node-package",
+        "clipkiln",
+        "video",
+        "clips",
+        "shorts"
+    ],
+    "author": {
+        "name": "Clipkiln",
+        "email": "support@clipkiln.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MagitMan1/n8n-nodes-clipkiln.git"
+    },
+    "scripts": {
+        "build": "n8n-node build",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease"
+    },
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "strict": true,
+        "credentials": [
+            "dist/credentials/ClipkilnApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/Clipkiln/Clipkiln.node.js",
+            "dist/nodes/ClipkilnTrigger/ClipkilnTrigger.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "*",
+        "eslint": "9.32.0",
+        "prettier": "3.6.2",
+        "release-it": "^21.1.0",
+        "typescript": "5.9.2"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    }
+}
